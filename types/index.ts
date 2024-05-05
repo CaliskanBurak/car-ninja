@@ -7,3 +7,12 @@ export interface CustomButtonProps {
     containerStyles?: string;
     handleClick?: MouseEventHandler<HTMLButtonElement>
 }
+
+export interface CustomeFilterProps {
+    title: string
+}
+
+export interface SearchManufacturerProps {
+    manufacturer : string;
+    setManufacturer: (manufacturer: string) => void;
+}
