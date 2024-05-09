@@ -11,7 +11,7 @@ export interface CustomButtonProps {
     isDisabled?: boolean;
 }
 
-export interface CustomeFilterProps {
+export interface CustomFilterProps {
     title: string
 }
 
