@@ -1,10 +1,11 @@
 import { CarCard, CustomeFilter, Hero, SearchBar } from '@/components'
+import ShowMore from '@/components/ShowMore';
 import { fuels, yearsOfProduction } from '@/constants';
 import { fetchCars } from '@/utils'
 import Image from 'next/image'
 
 
-export default async function Home({searchParams}) {
+export default async function Home({searchParams}: any) {
 
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
@@ -44,6 +45,9 @@ export default async function Home({searchParams}) {
               ))}
               
             </div>
+            <ShowMore pageNumber={(searchParams.limit || 10) / 10 }
+            isNext={(searchParams.limit || 10 ) > allCars.length}
+            />
           </section>
         ) : (
           <div className='home__error-container'>
