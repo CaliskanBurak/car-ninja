@@ -19,7 +19,7 @@ const CustomFilter = ({ title, options }: CustomFilterProps) => {
 
     router.push(newPathName,{scroll:false})
   }
-  console.log(selected)
+
 
   return (
     <div className='w-fit'>
